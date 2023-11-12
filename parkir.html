@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Program Parkir</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #e0b1ec;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #hasil {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+    <div class="container">
+        <h2>Program Parkir</h2>
+        <form id="parkingForm">
+            <div class="form-group">
+                <label for="jamMasuk">Jam Masuk:</label>
+                <input type="time" id="jamMasuk" required>
+            </div>
+            <div class="form-group">
+                <label for="jamKeluar">Jam Keluar:</label>
+                <input type="time" id="jamKeluar" required>
+            </div>
+            <button type="submit">Hitung Biaya Parkir</button>
+        </form>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        document.getElementById('parkingForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const jamMasuk = document.getElementById('jamMasuk').value;
+            const jamKeluar = document.getElementById('jamKeluar').value;
+
+            const masuk = new Date('2023-11-10T' + jamMasuk + ':00');
+            const keluar = new Date('2023-11-10T' + jamKeluar + ':00');
+
+            const diff = keluar.getTime() - masuk.getTime();
+            const diffMinutes = diff / (1000 * 60);
+
+            const biaya = Math.ceil(diffMinutes / 20) * 1350; // Biaya per 20 menit
+
+            document.getElementById('hasil').innerHTML = `Biaya parkir: Rp ${biaya.toLocaleString()}`;
+        });
+
+    </script>
+
+</body>
+
+</html>

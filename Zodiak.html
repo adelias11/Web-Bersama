@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JS Zodiak</title>
+</head>
+<style type="text/css">
+    body {
+        background-color: rgb(241, 172, 221);
+    }
+</style>
+<div id="box">
+    <h1 align="center"> Apa Ramalan Zodiakmu ?</h1>
+</div>
+<h2 align="center"> Masukkan Hari Lahir Dan Bulan Lahir Kamu! </h2>
+<p align="center">Tanggal:<input type="number" id="day" min="1" max="31"></p>
+<p align="center">Bulan:<input type="number" id="month" min="1" max="12"></p>
+<center><input type="button" value="Proses" onclick="zodiac()" align="right" /></center>
+<p align="center" id="photo"></p>
+<p align="center" id="space"> Zodiak anda <span id="output"></span> </p>
+
+<p align="center" id="zoodiak"></p>
+<p align="center" id="umum"></p>
+<p align="center" id="asmara"></p>
+<p align="center" id="keuangan"></p>
+<p align="center" id="karier"></p>
+
+<body>
+    <script type="text/javascript">
+        function zodiac() {
+            var bln = document.getElementById("month").value;
+            var tgl = document.getElementById("day").value;
+            var result = "tidak diketahui karana data input salah.";
+
+
+            if (tgl >= 20 && tgl <= 31 && bln == 1 || tgl >= 1 && tgl <= 18 && bln == 2) {
+                result = ("Aquarius");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-aquarius.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Aquarius adalah penimbang air dan elemen angin. Ciri Aquarius adalah suka kebebasan dan tidak suka diatur, mereka memiliki banyak ide atau pikiran sendiri dalam menjalani sebuah kehidupan, karier, keluarga dan asmaranya. Karena sifat bebasnya ini, maka Aquarius memiliki pemikiran yang terbuka, wawasan yang luas dan bijaksana. Karakter Aquarius adalah penuh kharisma sehingga menarik kehidupan orang lain..";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Memperhatikan diri sendiri itu perlu, tapi kamu tidak bisa mengabaikan orang disekitarmu juga.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Mendengar curhatan teman-temanmu bisa jadi awal untuk kamu lebih memahami kehidupan percintaan. Couple: Kamu sekarang sudah memiliki prioritas baru, jangan sampai kamu mengesampingkan pasangan.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Tidak melulu harus ikut tren, kamu juga bisa menciptakan bisnis yang berbeda dengan murni dari idemu. Jadilah trendsetter!";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Lebih baik mengerjakan sesuatu dari SOP yang ada agar berjalan dengan baik dan benar.";
+
+            }
+
+            if (tgl >= 19 && tgl <= 31 && bln == 2 || tgl >= 1 && tgl <= 20 && bln == 3) {
+                result = ("Pisces");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-pisces.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Pisces memiliki lambang ikan dan elemen air. Pisces memiliki ciri yang mudah terharu dan labil. Karakternya dikenal sebagai tanda yang yang cantik luar dan dalam. Pisces mudah sekali berempati, menempatkan dirinya di posisi orang lain sehingga ia bisa lebih memahami dan merasakan penderitaan orang lain. Seorang Pisces juga sangat kreatif, peka terhadap orang lain dan tidak pernah mementingkan dirinya sendiri.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Hati-hati menceritakan idemu ke orang lain, jangan sampai ide berhargamu dicuri oleh mereka yang tidak bertanggung jawab.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Hibur hatimu dengan pergi ke tempat-tempat yang menyenangkan. Couple: Lakukan sesuatu yang baru agar hubungan kalian lebih seru dan berwarna.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Rutin perhatikan keuangan bisnismu dengan baik agar tidak terjadi minus atau kerugian.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Melihat kolegamu yang bersemangat melakukan pekerjaannya membuatmu harus termotivasi untuk melakukan hal yang sama atau bahkan lebih.";
+
+            }
+            if (tgl >= 21 && tgl <= 31 && bln == 3 || tgl >= 1 && tgl <= 19 && bln == 4) {
+                result = ("Aries");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-aries.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Aries memiliki lambang domba dan berelemen api. Sifat murah hati dari Aries sering kali menjadikannya sosok panutan. Meskipun memiliki sifat yang keras, Aries selalu rela untuk berkorban bagi orang terdekatnya. Tak hanya itu, karakter Aries yang mudah bergaul dengan banyak orang, membuatnya memiliki kesempatan untuk sukses yang tinggi. Kamu cocok untuk bekerja di berbagai banyak bidang.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Jaga terus suasana hatimu dengan berkumpul bersama orang-orang tersayang serta berpikiran positif.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Beri kesempatan orang baru untuk mengisi hatimu, sudah saatnya lepas dari bayang-bayang masa lalu. Couple: Hubungan kalian akan semakin membaik jika kamu dan pasangan sama-sama memiliki kemauan untuk memperbaikinya";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Jangan lupa untuk menyisihkan uang untuk melakukan perawatan penampilanmu agar tampak lebih menarik.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Orang-orang mantan kolegamu atau bahkan mantan bosmu mungkin tampak berat untuk melepas, tapi kamu harus berkomitmen dengan pekerjaan barumu.";
+            }
+
+            if (tgl >= 20 && tgl <= 30 && bln == 4 || tgl >= 1 && tgl <= 20 && bln == 9) {
+                result = ("Taurus");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-taurus.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Memiliki lambang Banteng atau Sapi Jantan. Taurus berelemen tanah. Taurus memiliki sifat yang cerdas dan memahami semua konsekuensi atas pilihan hidupnya. Taurus mudah marah, apabila kemarahannya memuncak maka jangan pernah mencoba menasehatinya karena justru Taurus semakin membencinya. Menjadi jurnalistik, pelukis, dan pekerjaan yang berhubungan dengan seni sangat cocok untuk Taurus.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Terkadang kamu tidak bisa mengandalkan kepekaan orang lain, bicarakan saja apa yang kamu butuhkan.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Selagi ada waktu, kamu bisa melakukan introspeksi dan memperbaiki diri lebih baik lagi.Couple: Jika selama ini kamu hanya ingin diperhatikan, ubah itu dan berikan perhatian yang sama ke pasangan.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Pertama kali terjun di dunia investasi mungkin sedikit membingungkan, kamu bisa bertanya kepada ahlinya.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Tidak harus individualis, kamu juga perlu membantu sesama kolega. Siapa tahu nanti mereka akan melakukan hal untukmu juga.";
+
+            }
+
+            if (tgl >= 21 && tgl <= 31 && bln == 9 || tgl >= 1 && tgl <= 20 && bln == 6) {
+                result = ("Gemini");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-gemini.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Memiliki lambang saudara kembar dan elemen angin. Sifatnya yang tidak mudah ditebak, seringkali membuat bingung orang terdekatnya. Kecerdasan Gemini adalah daya tarik utama pemilik zodiak ini. Pesonanya yang menawan membuatnya banyak dikagumi oleh orang terdekatnya, meskipun sering bersikap kebalikannya di depan orang tersayangnya sekali pun. Gemini memiliki ciri tidak mudah puas dengan hidupnya, ia akan selalu mencari yang terbaik untuk dirinya.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Tahu bagaimana rasanya sendiri, kamu bisa lebih bersimpati ke orang sekitarmu yang membutuhkan dekapan hangat dan teman cerita.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Di saat hubungan percintaanmu kurang indah, ada sahabat-sahabat yang selalu ada untukmu. Couple: Saat memutuskan sesuatu dengan pasangan, selalu pertimbangkan dua sisi.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Tetap jaga kontak dengan teman-teman bisa berguna untukmu. Siapa tahu mereka memiliki lapangan pekerjaan yang kamu butuhkan atau mereka adalah mitra yang potensial.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Kerjakan apa yang ada di tanganmu sekarang dan jangan banyak berangan-angan.";
+
+            }
+
+            if (tgl >= 21 && tgl <= 30 && bln == 6 || tgl >= 1 && tgl <= 22 && bln == 7) {
+                result = ("Cancer");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-cancer.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Lambang dari zodiak ini adalah kepiting. Sifat Cancer adalah memiliki welas asih yang tinggi. Ia rela melakukan apa saja agar orang terdekatnya bahagia. Gemar mengejar hal kecil dan mengabaikan hal-hal besar adalah ciri dari Cancer. Tak hanya itu, Cancer memiliki sifat yang setia. Ia sangat memedulikan pasangan dan keluarga. Kebahagiaan orang terdekatnya adalh sumber bahagianya.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Ini Saatnya merilekskan tubuh dan pikiran, kamu sudah bekerja keras hingga titik ini.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Perbanyak pengalaman sebelum kamu memiliki pasangan dan semua tak lagi sama. Couple: Jangan memaksakan sebuah hal, biarkan mengalir dengan sendirinya dan kamu menikmati setiap momen bersama pasangan.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Mencari sponsor untuk mendanai bisnismu bisa kamu lakukan jika modal yang punya dirasa kurang.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Proyek yang sedang kamu kerjakan mungkin menemui kendali, segera amati akar permasalahannya untuk dicarikan solusi.";
+
+            }
+            if (tgl >= 23 && tgl <= 31 && bln == 7 || tgl >= 1 && tgl <= 22 && bln == 8) {
+                result = ("Leo");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-leo.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Lambang zodiak Leo adalah singa dan berelemen api. Tak heran, Leo memiliki sifat yang suka memerintah. Ia tak segan marah kepada siapa saja yang menghalangi hidupnya. Bagi Leo memberi nasihat kepada orang lain adalah kesenangan baginya, meskipun belum tentu ia menjalaninya. Leo sangat cocok dijadikan seorang pemimpin, kemampuannya beradaptasi membuatnya bisa bekerja di berbagai bidang.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Sudah saatnya kamu merasakan petualangan yang ingin kamu lakukan, rencanakan dengan matang untuk itu.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Kamu bisa mendatangi tenaga profesional jika luka dari masa lalu begitu sulit menghilang dan mengganggu aktivitasmu. Couple: Saling mementingkan ego masing-masing bisa membahayakan hubungan kamu dan pasangan.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Kinerjamu yang bagus bisa jadi menambahkan bonus ke gajimu.";
+                document.getElementById("karier").innerHTML = "<b>Fokuslah melakukan tugasmu dan jauhkan diri dari media sosial yang bisa mengganggu.";
+
+            }
+            if (tgl >= 23 && tgl <= 31 && bln == 8 || tgl >= 1 && tgl <= 22 && bln == 9) {
+                result = ("Virgo");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-virgo.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Lambang zodiak Virgo adalah sang perawan dan memiliki elemen tanah. Sifat Virgo adalah penurut dan berhati lembut. Ia menyukai ketenangan. Ciri khas Virgo adalah sifat egois dan keras kepalanya. Ia selalu mengutamakan kepentingannya dan tidak peduli dengan orang lain. Meskipun demikian, Virgo sangat teliti dan bisa menyimpan rahasia dengan baik. Tak heran, Virgo adalah tujuan untuk teman terdekatnya saat butuh didengarkan.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Hari akan menyenangkan saat kamu berkumpul dengan sahabat, luangkan waktu untuk mereka.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Melatih emosi dari dalam diri kamu akan sangat bermanfaat, apalagi saat sudah memiliki pasangan. Couple: Ungkapkan apa yang kamu rasakan akhir-akhir ini ke pasangan agar perasaanmu lega.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Melakukan pelatihan untuk karyawan juga diperlukan untuk meningkat kinerja mereka dan bisnis bisa berkembang.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Bekerja keras, menjaga integritas, dan dapat bekerja sama dengan kolega membuatmu dihormati oleh banyak orang.";
+            }
+            if (tgl >= 23 && tgl <= 30 && bln == 9 || tgl >= 1 && tgl <= 22 && bln == 10) {
+                result = ("Libra");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-libra.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Lambang zodiak Libra adalah timbangan dan berelemen udara. Timbangan mewakili sisi kehidupan yang seimbang, teratur, setara, dan adil. Ini sangat merepresentasikan pribadi Libra. Ia tahu cara menemukan keseimbangan dan harmoni dalam hidup. Dalam hal apapun, Libra akan selalu menjadi sosok yang seimbang dan melakukan hal sama rata. Selain itu, Libra juga dikenal sebagai penasihat yang baik.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Jadilah penengah dari orang sekitarmu yang bersitegang, untuk menciptakan rasa damai yang kamu suka.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Sekarang fokus saja pada dirimu, menenangkan hati dan membahagiakan diri sendiri. Couple: Pasangan juga punya dunia sendiri dengan sahabatnya, kamu harus bisa lebih bijak dan tidak membatasi jika tidak memberi dampak negatif ke pasangan.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Jika kamu merencanakan untuk melakukan sebuah perjalanan liburan, mulai menabunglah dari sekarang.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Cobalah untuk bekerja secara teratur agar kamu tidak terus dihantui oleh deadline.";
+            }
+            if (tgl >= 23 && tgl <= 31 && bln == 10 || tgl >= 1 && tgl <= 21 && bln == 11) {
+                result = ("Scorpio");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-scorpio.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Lambang zodiak Scorpio adalah kalajengking dan memiliki elemen air. Sifat Scorpio dikenal sebagai sosok yang tekun, ambisius, dan pekerja keras. Ia juga sangat dermawan, rendah hati dan setia kawan. Karakter yang paling kuat dari Scorpio adalah intuisinya yang selalu tepat dan selalu mengikuti kata hati. Seorang Scorpio dapat dengan mudah membuat keputusan karena kekuatan instingnya ini.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Rapikan dan tata ulang kamarmu untuk suasana hati lebih baik.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Saat ini kamu bisa lebih fokus mewujudkan impian terdekat yang ingin kamu capai. Couple: Dengan masalah yang datang kamu dan pasangan bisa lebih saling memahami satu sama lain.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Uang yang baru kamu dapatkan harus bisa dikontrol dengan baik, jangan sampai kalap berbelanja online.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Mungkin ada seseorang yang tidak suka padamu, namun selama kamu tidak berbuat salah abaikan saja mereka dan lakukan pekerjaanmu dengan baik seperti biasa.";
+            }
+            if (tgl >= 22 && tgl <= 30 && bln == 11 || tgl >= 1 && tgl <= 18 && bln == 12) {
+                result = ("Sagittarius");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-sagittarius.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Sagitarius memiliki lambang pemanah dan berelemen api. Karakter Sagitarius memiliki kepribadian yang bebas dan suka berpetualang. Sagitarius punya kemampuan membuat hal paling membosankan menjadi hal yang paling menyenangkan. Sisi kepribadian yang hangat membuat orang lain merasa nyaman saat di dekatnya.";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Bukan kamu yang harus mengubah jati diri, tapi kelompok pertemananmu yang harus kamu pikirkan kembali.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Jangan memaksa diri jika hatimu berkata tidak, ungkapkan saja sejujurnya ke dia. Couple: Memiliki percakapan yang dalam, serius, dan berbobot juga perlu untuk menentukan arah hubungan kalian.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Lihat peluang yang ada di sekitarmu untuk ide mendirikan bisnis.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Jika kamu dalam posisi atas, kamu harus bisa lebih bertanggung jawab dan tidak bertindak semena-mena.";
+            }
+
+            if (tgl >= 22 && tgl <= 31 && bln == 12 || tgl >= 1 && tgl <= 19 && bln == 1) {
+
+                result = ("Capricorn");
+                document.getElementById("photo").innerHTML = "<img src='https://www.horoscope.com/images-US/signs/profile-capricorn.png'width=9%>";
+                document.getElementById("zoodiak").innerHTML = "<b>Karakter : </b>Memiliki lambang kambing laut dan elemen tanah. Karakter Capricorn sangat realistis dan berpikir kritis. Ciri utamanya adalah suka pekerja keras untuk mencapai tujuan hidupnya. Capricorn memiliki tekad yang kuat untuk melakukan segala sesuatu..";
+                document.getElementById("umum").innerHTML = "<b>Umum : </b>Menjaga kesehatan mental tetap stabil adalah salah satu hal penting yang harus kamu perhatikan.";
+                document.getElementById("asmara").innerHTML = "<b>Asmara : </b>Single: Kamu mungkin akan overthinking dengan status lajang ini, namun seiring berjalannya waktu kamu pasti bisa menerimanya. Couple: Tidak perlu terlalu khawatir jika kamu sudah percaya sepenuhnya kepada pasangan, tetap berpikiran positif adalah kuncinya.";
+                document.getElementById("keuangan").innerHTML = "<b>Keuangan : </b>Membuka bisnis di rumah bisa kamu lakukan untuk mengisi waktu luang.";
+                document.getElementById("karier").innerHTML = "<b>Karier : </b>Perhatikan setiap langkahmu karena persaingan di tempat kerja yang keras dapat menjatuhkanmu kapan saja.";
+            } else if (bln > 12 || tgl > 31) {
+                alert("Mohon input tanggal, bulan yang bener! -_- ");
+            }
+            document.getElementById("output").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: rgb(70, 4, 25);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            position: relative;
+            font-family: 'Segoe UI';
+            color: rgb(236, 228, 228);
+            overflow: hidden; /* Prevent text overflow */
+        }
+        h1::before,
+        h1::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        h1::before {
+            background: whitesmoke;
+            animation: tulisan 10s linear infinite;
+            z-index: +1; /* Bring the white animation behind the text */
+        }
+        h1::after {
+            background: rgb(235, 7, 7);
+            width: 5px;
+            animation: tulisan 10s linear infinite;
+        }
+        @keyframes tulisan {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang di Website Kami</h1>
+</body>
+</html>

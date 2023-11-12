@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulir Penerimaan Pegawai</title>
+</head>
+
+<body>
+    <h1>Formulir Penerimaan Pegawai</h1>
+
+    <form action="output-penerimapegawai.php" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <label for="nama">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+
+        <label for="nama">Posisi:</label>
+        <select id="posisi" name="posisi">
+            <option value="IT">IT</option>
+            <option value="Keuangan">Keuangan</option>
+            <option value="SDM">SDM</option>
+        </select><br><br>
+
+        <input type="submit" value="Kirim">
+    </form>
+</body>
+
+</html>

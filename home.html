@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #9c5d977d;">
+    <style>
+        h1 {
+            color: rgb(214, 11, 11);
+        }
+        .marquee-container {
+          overflow: hidden;
+          white-space: nowrap;
+        }
+    
+        .marquee-content {
+          display: inline-block;
+          animation: marquee 10s linear infinite;
+        }
+    
+        @keyframes marquee {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <h1>Berakit-rakit kehulu
+            Berenang-renang ke tepian
+            Kalau ada pinjam seratus dulu
+            Nanti aku bayar kemudian<h1>
+        </div>
+      </div>
+    <img src="/asset/jokes.jpg", width="80%", height="70%">
+      <script>
+        // Optional: JavaScript for pausing on hover
+        const marqueeContent = document.querySelector('.marquee-content');
+    
+        marqueeContent.addEventListener('mouseenter', () => {
+          marqueeContent.style.animationPlayState = 'paused';
+        });
+    
+        marqueeContent.addEventListener('mouseleave', () => {
+          marqueeContent.style.animationPlayState = 'running';
+        });
+      </script>
+
+</body>
+   
+</body>
+
+</html>

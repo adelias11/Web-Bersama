@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center; background-color: #096ce6;">
+    <style>
+        h1 {
+            color: rgb(255, 0, 221);
+        }
+        .marquee-container {
+          overflow: hidden;
+          white-space: nowrap;
+        }
+    
+        .marquee-content {
+          display: inline-block;
+          animation: marquee 10s linear infinite;
+        }
+    
+        @keyframes marquee {
+          from {
+            transform: translateX(100%);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <h1>Gencaneyo....<h1>
+        </div>
+      </div>
+    
+      <script>
+        // Optional: JavaScript for pausing on hover
+        const marqueeContent = document.querySelector('.marquee-content');
+    
+        marqueeContent.addEventListener('mouseenter', () => {
+          marqueeContent.style.animationPlayState = 'paused';
+        });
+    
+        marqueeContent.addEventListener('mouseleave', () => {
+          marqueeContent.style.animationPlayState = 'running';
+        });
+      </script>
+
+</body>
+
+</html>

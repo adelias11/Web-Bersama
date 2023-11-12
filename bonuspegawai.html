@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kalkulator Bonus Pegawai</title>
+</head>
+
+<body>
+    <h1>Kalkulator Bonus Pegawai</h1>
+
+    <label for="penjualan">Penjualan:</label>
+    <input type="number" id="penjualan"><br>
+
+    <button onclick="hitungBonus()">Hitung Bonus</button><br>
+
+    <div id="hasil">
+        <!-- Hasil akan ditampilkan di sini -->
+    </div>
+
+    <script>
+        function hitungBonus() {
+            var penjualan = parseFloat(document.getElementById("penjualan").value);
+            var bonus = 0;
+
+            if (penjualan >= 20000000) {
+                bonus = (10000000 * 0.10) + ((penjualan - 10000000) * 0.18);
+            } else if (penjualan >= 10000000) {
+                bonus = penjualan * 0.10;
+            }
+
+            document.getElementById("hasil").innerHTML = "Bonus Pegawai: " + bonus;
+        }
+    </script>
+</body>
+
+</html>

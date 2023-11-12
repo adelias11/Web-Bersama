@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Perhitungan Gaji</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Perhitungan Gaji</h1>
+    <form id="salaryForm">
+        <label for="jumlahHariKerja">Jumlah Hari Kerja:</label>
+        <input type="number" id="jumlahHariKerja" required><br>
+        <label for="jamLembur">Jam Lembur:</label>
+        <input type="number" id="jamLembur" required><br>
+        <input type="button" value="Hitung Gaji" onclick="hitungGaji()">
+    </form>
+    <h2>Hasil Perhitungan</h2>
+    <p>Gaji Total: Rp. <span id="hasilGaji">0</span></p>
+
+    <script>
+        function hitungGaji() {
+            var gajiPerHari = 50000;
+            var jumlahHariKerja = parseFloat(document.getElementById("jumlahHariKerja").value);
+            var jamLembur = parseFloat(document.getElementById("jamLembur").value);
+
+            var gajiLembur = 0;
+            if (jamLembur <= 2) {
+                gajiLembur = jamLembur * 25000;
+            } else {
+                gajiLembur = jamLembur * 35000;
+            }
+
+            var bonusUangMakan = 0;
+            if (jumlahHariKerja >= 20) {
+                bonusUangMakan = 5000 * jumlahHariKerja;
+            }
+
+            var gajiTotal = (gajiPerHari * jumlahHariKerja) + gajiLembur + bonusUangMakan;
+
+            document.getElementById("hasilGaji").textContent = gajiTotal;
+        }
+    </script>
+</body>
+
+</html>
